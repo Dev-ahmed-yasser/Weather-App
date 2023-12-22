@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <div class="search">
+                <img src="imgs/location.svg" alt="location" class="location">
+                <input type="text" id="srch-city" placeholder="enter your desired location">
+                <button id="srch-btn" class="srch-btn">
+                    <img src="imgs/search.svg" alt="search button">
+                </button>
+            </div>
+            <div class="results " id="results">
+                <div class="invalid" >
+                        <img src="imgs/404.png" style="width: 250px;margin-bottom: 30px;">
+                    <p>oops Invalid location ☹️</p>
+                </div>
+                <div class="weather-state">
+                    <img id="weather-image" src="imgs/clear.png" alt="weather-state">
+                    <h1 id="temperature">25</h1>
+                    <span>°C</span>
+                    <h5 id="weather-describtion">Clear</h5>
+                </div>
+                <div class="other-details">
+                    <div class="hum">
+                        <img src="imgs/humidity.svg" alt="humidity">
+                        <div class="details-txt">
+                            <span id="humidity">88%</span>
+                            <span>humidity</span>
+                        </div>
+                    </div>
+                    <div class="wind">
+                        <img src="imgs/wind.svg" alt="wind">
+                        <div class="details-txt">
+                            <span id="wind-speed">0km/hr</span>
+                            <span>wind speed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;800&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+  
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #08213f;
+  background-image: url("../imgs/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.container::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000029;
+  position: absolute;
+}
+.invalid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 65px;
+}
+
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 6px 20px;
+  border-radius: 22.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.75);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input,
+.search input:focus {
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  height: 40px;
+  width: 230px;
+  font-size: 25px;
+}
+.search input::placeholder {
+  font-size: 18px;
+}
+.location {
+  width: 25px;
+}
+
+.srch-btn {
+  border: 0;
+  background-color: #3999c39c;
+  border-radius: 50%;
+  height: 37px;
+  width: 37px;
+  padding: 10px;
+  cursor: pointer;
+}
+.srch-btn img {
+  width: 100%;
+  display: block;
+}
+/* ================== RESULT STYLING ==================== */
+.results {
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms linear;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.results.open {
+  height: 450px;
+}
+
+.weather-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: transform 300ms 200ms linear;
+  
+}
+.weather-state.open{
+  transform: scale(1);
+}
+.weather-state h1,
+h1 {
+  position: relative;
+  font-size: 3rem;
+  margin: 10px;
+}
+.weather-state span {
+  position: absolute;
+  top: 69%;
+  right: 103px;
+  font-weight: bold;
+}
+h5 {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.weather-state img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.other-details {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  transform: scale(0);
+  transition: transform 300ms 200ms linear;
+}
+.other-details.open {
+  transform: scale(1);
+}
+.other-details img {
+  width: 30px;
+}
+
+.details-txt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.details-txt > span:first-child {
+  font-size: 22px;
+}
+.details-txt > span:nth-child(2) {
+  font-size: 12px;
+}
+.hum,.wind {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
